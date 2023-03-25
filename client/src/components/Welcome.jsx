@@ -6,7 +6,7 @@ import { Loader } from "./";
 
 const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
-const Input = (placeholder, name, type, value, handleChange) => (
+const Input = ({placeholder, name, type, value, handleChange}) => (
   <input 
   placeholder={placeholder}
   type={type}
@@ -18,7 +18,14 @@ const Input = (placeholder, name, type, value, handleChange) => (
 );
 
 const Welcome = () => {
-  const conntectWallet = () => {};
+  const conntectWallet = () => {
+
+  };
+
+  const handleSubmit = () => {
+
+  }
+
   return (
     <div className="flex w-full justify-center items-center">
       <div className="flex md:flex-row items-start justify-between md:p-20 py-12 px-4">
@@ -76,11 +83,18 @@ const Welcome = () => {
 
           <div className="h-[1px] w-full bg-gray-400 my-2"/>
 
-          {true ? (
-
-          ) : ()}
-
-
+          {false ? (
+            <Loader/>
+          ) : (
+            <button
+            type="button"
+            onClick={handleSubmit}
+            className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
+            >
+            Send Now
+            </button>
+          )}
+          
           </div>
           
         </div>
