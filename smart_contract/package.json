@@ -16,5 +16,8 @@
     "ethereum-waffle": "^4.0.10",
     "ethers": "^5.7.2",
     "hardhat": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.10"
   }
 }
